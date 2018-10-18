@@ -16,6 +16,7 @@ HeadTag : ERD2WHead {
 }
 
 EntitiesMenu : MenuHeader {
+	title = d2wContext.displayNameForEntity;
 }
 
 ERD2WDebugFlags : ERD2WDebugFlags {

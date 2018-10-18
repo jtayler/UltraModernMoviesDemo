@@ -18,6 +18,7 @@ public class MenuHeader extends ERXComponent {
         super(context);
     }
     
+    public String title;
 	// ERXModernNavigationMenu Support
 	
     public NSKeyValueCoding navigationContext() {

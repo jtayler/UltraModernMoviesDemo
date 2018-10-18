@@ -16,9 +16,9 @@
 	<key>CFBundleSignature</key>
 	<string>webo</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.0</string>
+	<string>7.0</string>
 	<key>CFBundleVersion</key>
-	<string></string>
+	<string>7.0.0-SNAPSHOT</string>
 	<key>NSExecutable</key>
 	<string>ERModernMoviesDemo</string>
 	<key>NSJavaNeeded</key>
@@ -33,5 +33,7 @@
 	<string>Contents/Resources/Java</string>
 	<key>NSJavaRootClient</key>
 	<string>Contents/WebServerResources/Java</string>
+	<key>NSPrincipalClass</key>
+	<string>er.modern.movies.demo.Application</string>
 </dict>
 </plist>

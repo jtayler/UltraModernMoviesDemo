@@ -1125,6 +1125,46 @@
     {
       "author" = "100"; 
       "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+            "qualifiers" = (
+              {
+                "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+                "key" = "task"; 
+                "selectorName" = "isEqualTo"; 
+                "value" = "list"; 
+              }, 
+              {
+                "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+                "key" = "entity.name"; 
+                "selectorName" = "isEqualTo"; 
+                "value" = "Movie"; 
+              }
+            ); 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EONotQualifier"; 
+            "qualifier" = {
+              "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+              "key" = "pageConfiguration"; 
+              "selectorName" = "isLike"; 
+              "value" = "*Embed*"; 
+            }; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "repetitionComponentName"; 
+        "value" = "BMLCardRepetition"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
       "documentation" = "Specify the display property keys for a given embedded configuration."; 
       "lhs" = {
         "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
@@ -1151,46 +1191,6 @@
           "category", 
           "rated"
         ); 
-      }; 
-    }, 
-    {
-      "author" = "100"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "look"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "ERModernLook"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "entity.name"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "task"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "list"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "parentPageConfiguration"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = {
-              "class" = "com.webobjects.foundation.NSKeyValueCoding$Null"; 
-            }; 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "repetitionComponentName"; 
-        "value" = "BMLCardRepetition"; 
       }; 
     }, 
     {
@@ -1332,31 +1332,6 @@
     {
       "author" = "100"; 
       "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "task"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "list"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "entity.name"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = "Movie"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "subTask"; 
-            "selectorName" = "isEqualTo"; 
-            "value" = {
-              "class" = "com.webobjects.foundation.NSKeyValueCoding$Null"; 
-            }; 
-          }
-        ); 
-      }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "cardSectionsContents"; 

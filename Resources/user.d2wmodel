@@ -591,6 +591,21 @@
       "author" = "100"; 
       "class" = "com.webobjects.directtoweb.Rule"; 
       "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+        "key" = "propertyKey"; 
+        "selectorName" = "isEqualTo"; 
+        "value" = "budget"; 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "formatter"; 
+        "value" = "$###,###.##;0;-###,###.##"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
         "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
         "qualifiers" = (
           {
@@ -1339,7 +1354,7 @@
           "card-link-title" = "Tell me more &rarr;"; 
           "card-text" = "object.plotSummary.summary"; 
           "card-title" = "object.title"; 
-          "cardImageLink" = "https://designrevision.com/docs/shards/images/1.jpg"; 
+          "cardImageLink" = "https://designrevision.com/docs/shards/images/3.jpg"; 
           "inspectObjectAction" = "inspectObjectAction"; 
         }; 
       }; 

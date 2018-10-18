@@ -18,6 +18,7 @@ public class Application extends ERXApplication {
     	super.finishInitialization();
     	
     	// Setup main navigation
+    	// or not.
     	ERXNavigationManager.manager().configureNavigation();
     	
     }

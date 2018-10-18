@@ -556,10 +556,21 @@
       "author" = "100"; 
       "class" = "com.webobjects.directtoweb.Rule"; 
       "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-        "key" = "entity.name"; 
-        "selectorName" = "isEqualTo"; 
-        "value" = "MovieRole"; 
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "RuleIsDisabled"; 
+            "selectorName" = "isEqual"; 
+            "value" = "YES"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entity.name"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "MovieRole"; 
+          }
+        ); 
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
@@ -1335,6 +1346,14 @@
             "key" = "entity.name"; 
             "selectorName" = "isEqualTo"; 
             "value" = "Movie"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "subTask"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = {
+              "class" = "com.webobjects.foundation.NSKeyValueCoding$Null"; 
+            }; 
           }
         ); 
       }; 
@@ -1346,7 +1365,7 @@
           "card-text" = "object.plotSummary.summary"; 
           "card-title" = "object.title"; 
           "cardImageLink" = "https://designrevision.com/docs/shards/images/1.jpg"; 
-          "inspectAction" = "inspectAction"; 
+          "inspectObjectAction" = "inspectObjectAction"; 
         }; 
       }; 
     }, 
@@ -1516,6 +1535,35 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "toManyRepetitionComponentName"; 
         "value" = "ERMDReducedListPageRepetition"; 
+      }; 
+    }, 
+    {
+      "author" = "200"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "documentation" = "Specify the display property keys for a given embedded configuration."; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entity.name"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "MovieRole"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "edit"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "displayPropertyKeys"; 
+        "value" = (
+          "roleName"
+        ); 
       }; 
     }, 
     {

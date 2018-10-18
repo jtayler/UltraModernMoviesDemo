@@ -1346,7 +1346,7 @@
           "card-text" = "object.plotSummary.summary"; 
           "card-title" = "object.title"; 
           "cardImageLink" = "https://designrevision.com/docs/shards/images/1.jpg"; 
-          "inspectAction" = "inspectAction"; 
+          "inspectObjectAction" = "inspectObjectAction"; 
         }; 
       }; 
     }, 

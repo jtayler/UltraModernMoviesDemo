@@ -1,3 +1,7 @@
+NavigationState : WOString {
+    value = session.navigationState;
+}
+
 MainContent : WOComponentContent {
     _unroll = YES;
 }

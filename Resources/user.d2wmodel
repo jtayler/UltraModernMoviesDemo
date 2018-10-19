@@ -799,7 +799,7 @@
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
             "key" = "pageConfiguration"; 
             "selectorName" = "isLike"; 
-            "value" = "_Edit*Movie"; 
+            "value" = "Edit*Movie"; 
           }, 
           {
             "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
@@ -844,54 +844,6 @@
           "category", 
           "rated"
         ); 
-      }; 
-    }, 
-    {
-      "author" = "100"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "RuleIsDisabled"; 
-            "selectorName" = "isEqual"; 
-            "value" = "YES"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-            "qualifiers" = (
-              {
-                "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                "key" = "task"; 
-                "selectorName" = "isEqualTo"; 
-                "value" = "inspect"; 
-              }, 
-              {
-                "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-                "qualifiers" = (
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "entity.name"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "Movie"; 
-                  }, 
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "propertyKey"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "studio"; 
-                  }
-                ); 
-              }
-            ); 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "componentName"; 
-        "value" = "BMLLinkToOne"; 
       }; 
     }, 
     {
@@ -1002,57 +954,6 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "componentName"; 
         "value" = "ERMD2WEditToOneTypeAhead"; 
-      }; 
-    }, 
-    {
-      "author" = "100"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "RuleIsDisabled"; 
-            "selectorName" = "isEqual"; 
-            "value" = "YES"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-            "qualifiers" = (
-              {
-                "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                "key" = "entity.name"; 
-                "selectorName" = "isEqualTo"; 
-                "value" = "Movie"; 
-              }, 
-              {
-                "class" = "com.webobjects.eocontrol.EOOrQualifier"; 
-                "qualifiers" = (
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "task"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "inspect"; 
-                  }, 
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "task"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "edit"; 
-                  }
-                ); 
-              }
-            ); 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "tabSectionsContents"; 
-        "value" = (
-          "title", 
-          "plotSummary"
-        ); 
       }; 
     }, 
     {
@@ -1276,95 +1177,6 @@
           "rated", 
           "plotSummary.summary"
         ); 
-      }; 
-    }, 
-    {
-      "author" = "100"; 
-      "class" = "com.webobjects.directtoweb.Rule"; 
-      "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-        "qualifiers" = (
-          {
-            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-            "key" = "RuleIsDisabled"; 
-            "selectorName" = "isEqual"; 
-            "value" = "YES"; 
-          }, 
-          {
-            "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
-            "qualifiers" = (
-              {
-                "class" = "com.webobjects.eocontrol.EOOrQualifier"; 
-                "qualifiers" = (
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "task"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "list"; 
-                  }, 
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "task"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "inspect"; 
-                  }
-                ); 
-              }, 
-              {
-                "class" = "com.webobjects.eocontrol.EOOrQualifier"; 
-                "qualifiers" = (
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "propertyKey"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "title"; 
-                  }, 
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "propertyKey"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "firstName"; 
-                  }, 
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "propertyKey"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "name"; 
-                  }, 
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "propertyKey"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "roleName"; 
-                  }, 
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "propertyKey"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "movie"; 
-                  }, 
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "propertyKey"; 
-                    "selectorName" = "isEqualTo"; 
-                    "value" = "studio"; 
-                  }, 
-                  {
-                    "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-                    "key" = "propertyKey"; 
-                    "selectorName" = "isLike"; 
-                    "value" = "*movie"; 
-                  }
-                ); 
-              }
-            ); 
-          }
-        ); 
-      }; 
-      "rhs" = {
-        "class" = "com.webobjects.directtoweb.Assignment"; 
-        "keyPath" = "componentName"; 
-        "value" = "ERMD2WInspectLink"; 
       }; 
     }, 
     {

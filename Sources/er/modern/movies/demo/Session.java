@@ -1,8 +1,6 @@
 package er.modern.movies.demo;
 
 import er.extensions.appserver.ERXSession;
-import er.extensions.appserver.navigation.ERXNavigationManager;
-import er.extensions.appserver.navigation.ERXNavigationState;
 
 public class Session extends ERXSession {
 	private static final long serialVersionUID = 1L;
@@ -18,13 +16,4 @@ public class Session extends ERXSession {
 		}
 		return _navController;
 	}
-	
-	public String navigationState() {
-		ERXNavigationState nstate = ERXNavigationManager.manager().navigationStateForSession(session());
-		String string = nstate + "";
-
-		return string;
-	}
-
-
 }

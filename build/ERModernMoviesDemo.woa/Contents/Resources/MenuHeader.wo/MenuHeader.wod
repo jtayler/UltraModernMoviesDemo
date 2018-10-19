@@ -1,8 +1,0 @@
-ERXNavigationMenu : BMLNavigationMenu {
-  navigationContext = navigationContext;
-}
-
-NavClass : WOGenericContainer {
-	elementName = "nav";
-	class = d2wContext.baseClassForNavBar;
-}

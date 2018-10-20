@@ -6,8 +6,9 @@ import com.webobjects.eoaccess.EOEntity;
 import com.webobjects.eoaccess.EOModelGroup;
 
 import er.extensions.components.ERXComponent;
+import er.modern.look.components.ERMODComponent;
 
-public class Main extends ERXComponent {
+public class Main extends ERMODComponent {
 	
 	/**
 	 * 

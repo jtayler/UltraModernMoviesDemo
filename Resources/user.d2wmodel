@@ -1182,6 +1182,7 @@
     {
       "author" = "100"; 
       "class" = "com.webobjects.directtoweb.Rule"; 
+      "documentation" = "This rule is to cover one that causes an unknown crashing error that i need to find."; 
       "lhs" = {
         "class" = "com.webobjects.eocontrol.EOOrQualifier"; 
         "qualifiers" = (
@@ -1246,11 +1247,10 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "cardSectionsContents"; 
         "value" = {
-          "card-link-title" = "Tell me more &rarr;"; 
           "card-text" = "object.plotSummary.summary"; 
           "card-title" = "object.title"; 
           "cardImageLink" = "https://designrevision.com/docs/shards/images/3.jpg"; 
-          "inspectObjectAction" = "inspectObjectAction"; 
+          "inspectAction" = "inspectObjectAction"; 
         }; 
       }; 
     }, 

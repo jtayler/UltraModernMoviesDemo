@@ -30,5 +30,6 @@
 	<classpathentry exported="true" kind="con" path="WOFramework/ERJavaMail"/>
 	<classpathentry exported="true" kind="con" path="WOFramework/BootstrapModernLook"/>
 	<classpathentry exported="true" kind="con" path="WOFramework/WOOgnl"/>
+	<classpathentry kind="con" path="WOFramework/ERRest"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -6,8 +6,6 @@ import com.webobjects.appserver.WORedirect;
 import com.webobjects.directtoweb.D2W;
 import com.webobjects.directtoweb.D2WContext;
 import com.webobjects.directtoweb.D2WPage;
-import com.webobjects.eoaccess.EOEntity;
-import com.webobjects.eoaccess.EOModelGroup;
 import com.webobjects.foundation.NSKeyValueCoding;
 import com.webobjects.foundation.NSMutableDictionary;
 
@@ -21,20 +19,16 @@ public class MenuHeader extends ERXComponent {
         super(context);
     }
     
-    private D2WContext d2wContext;
     public String title;
 
-	public D2WContext d2wContext() {	
-    	if (d2wContext == null) {
-    		d2wContext = new D2WContext();
-        	EOEntity entity = EOModelGroup.defaultGroup().entityNamed("Mtly");
-        	d2wContext().setEntity(entity);
-        	d2wContext().setTask("inspect");
-        	d2wContext().takeValueForKey("GET", "subtask");
-
-    	}
-    	return d2wContext;
+    public D2WContext d2wContext() {
+    	if (context().page() instanceof D2WPage) {
+			D2WPage d2wPage = (D2WPage) context().page();
+			return d2wPage.d2wContext();
+		}
+    	return new D2WContext();
     }
+
 	
     public NSKeyValueCoding navigationContext() {
     	

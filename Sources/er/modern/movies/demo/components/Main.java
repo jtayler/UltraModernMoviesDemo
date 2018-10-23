@@ -27,10 +27,8 @@ public class Main extends ERMODComponent {
 	public D2WContext d2wContext() {	
     	if (d2wContext == null) {
     		d2wContext = new D2WContext();
-        	EOEntity entity = EOModelGroup.defaultGroup().entityNamed("Login");
-        	d2wContext().setEntity(entity);
-        	d2wContext().setTask("Log In");
-
+    		d2wContext.takeValueForKey("Home", "navigationState");
+        	d2wContext().setTask("home");
     	}
     	return d2wContext;
     }

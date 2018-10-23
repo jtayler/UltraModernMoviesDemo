@@ -107,11 +107,8 @@ public class MoviesNavigationController implements NextPageDelegate {
         WOComponent nextPage = null;
         try {
     		checkNextPage();
-   		 EditPageInterface editPage = D2W.factory().editPageForNewObjectWithEntityNamed(entityName, session());
-   		 //nextPage.setNextPage(context().page());
-   		editPage.setNextPageDelegate(this);
-//            EditPageInterface epi = D2W.factory().editPageForNewObjectWithEntityNamed(entityName, session());
-//            epi.setNextPage(session().context().page());
+   		    EditPageInterface editPage = D2W.factory().editPageForNewObjectWithEntityNamed(entityName, session());
+   		    editPage.setNextPageDelegate(this);
             nextPage = (WOComponent) editPage;
         } catch (IllegalArgumentException e) {
             ErrorPageInterface epf = D2W.factory().errorPage(session());
@@ -151,8 +148,7 @@ public class MoviesNavigationController implements NextPageDelegate {
 		WOComponent page = context().page();
 		
 		nextPage = context().page();
-
-		 if (page instanceof QueryPageInterface) {
+		 if (page instanceof EditPageInterface || page instanceof QueryPageInterface) {
 			 // we don't put query pages on the stack
 			 // they are boring to cancel back to.
 			 //

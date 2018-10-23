@@ -40,7 +40,7 @@
 	{
 		name = "Admin";
 		action = "session.navController.adminAction";
-		children = ("Voting","Talent","Review");
+		children = ("Voting","Talent","Review","CreateReview");
 	},
 	{
 		name = "Voting";

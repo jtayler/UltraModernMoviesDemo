@@ -12,8 +12,7 @@ public class Application extends ERXApplication {
 		ERXApplication.log.info("Welcome to " + name() + " !");
 		setDefaultRequestHandler(requestHandlerForKey(directActionRequestHandlerKey()));
 	}
-	100 : (entity.name = 'User' and (propertyKey = 'username' or propertyKey = 'name')) => baseClassForInputSpan = fa fa-user-o [com.webobjects.directtoweb.Assignment]
-    @Override
+
     public void finishInitialization() {
     	super.finishInitialization();
     	

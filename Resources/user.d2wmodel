@@ -475,10 +475,21 @@
       "author" = "70"; 
       "class" = "com.webobjects.directtoweb.Rule"; 
       "lhs" = {
-        "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
-        "key" = "propertyKey"; 
-        "selectorName" = "isEqualTo"; 
-        "value" = "studio"; 
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "RuleIsDisabled"; 
+            "selectorName" = "isEqual"; 
+            "value" = "YES"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "propertyKey"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "studio"; 
+          }
+        ); 
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
@@ -704,6 +715,21 @@
       "author" = "100"; 
       "class" = "com.webobjects.directtoweb.Rule"; 
       "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+        "key" = "entity.name"; 
+        "selectorName" = "isEqualTo"; 
+        "value" = "TalentPhoto"; 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "displayKeyForEntity"; 
+        "value" = "talent.firstName"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
         "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
         "qualifiers" = (
           {
@@ -903,8 +929,8 @@
       "lhs" = {
         "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
         "key" = "pageConfiguration"; 
-        "selectorName" = "isEqualTo"; 
-        "value" = "ListMovie"; 
+        "selectorName" = "isLike"; 
+        "value" = "*ListMovie*"; 
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
@@ -921,8 +947,8 @@
       "lhs" = {
         "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
         "key" = "pageConfiguration"; 
-        "selectorName" = "isEqualTo"; 
-        "value" = "ListStudio"; 
+        "selectorName" = "isLike"; 
+        "value" = "*ListStudio*"; 
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
@@ -1185,6 +1211,39 @@
     {
       "author" = "100"; 
       "class" = "com.webobjects.directtoweb.Rule"; 
+      "documentation" = "Specify the display property keys for a given embedded configuration."; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "propertyKey"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "rated"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entity.name"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "Movie"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "task"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "edit"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "componentName"; 
+        "value" = "BMLCustomSelectString"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
       "lhs" = {
         "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
         "qualifiers" = (
@@ -1372,6 +1431,39 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "componentName"; 
         "value" = "ERD2WDisplayToOne"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "documentation" = "Specify the display property keys for a given embedded configuration."; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOAndQualifier"; 
+        "qualifiers" = (
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "propertyKey"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "rated"; 
+          }, 
+          {
+            "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+            "key" = "entity.name"; 
+            "selectorName" = "isEqualTo"; 
+            "value" = "Movie"; 
+          }
+        ); 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "displayPropertyValues"; 
+        "value" = (
+          "G", 
+          "PG", 
+          "PG-13", 
+          "R", 
+          "NC-17"
+        ); 
       }; 
     }, 
     {
@@ -1782,7 +1874,7 @@
         "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
         "key" = "pageConfiguration"; 
         "selectorName" = "isEqualTo"; 
-        "value" = "EditRelationshipEmbeddedMovie"; 
+        "value" = "EditRelationshipEmbeddedMovieRole"; 
       }; 
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 

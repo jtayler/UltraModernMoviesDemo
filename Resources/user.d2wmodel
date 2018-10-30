@@ -651,6 +651,21 @@
         "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
         "key" = "propertyKey"; 
         "selectorName" = "isEqualTo"; 
+        "value" = "rated"; 
+      }; 
+      "rhs" = {
+        "class" = "com.webobjects.directtoweb.Assignment"; 
+        "keyPath" = "baseClassForInputSpan"; 
+        "value" = "fa fa-at"; 
+      }; 
+    }, 
+    {
+      "author" = "100"; 
+      "class" = "com.webobjects.directtoweb.Rule"; 
+      "lhs" = {
+        "class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; 
+        "key" = "propertyKey"; 
+        "selectorName" = "isEqualTo"; 
         "value" = "movies"; 
       }; 
       "rhs" = {
@@ -708,7 +723,7 @@
       "rhs" = {
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "objectCardColumnClass"; 
-        "value" = "col-sm-12 col-md-6 pb-3 col-lg-4"; 
+        "value" = "col-sm-12 col-md-6 pb-4 col-lg-4"; 
       }; 
     }, 
     {
@@ -1764,6 +1779,7 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "cardSectionsContents"; 
         "value" = {
+          "card-footer" = "object.studio.name"; 
           "card-text" = "object.plotSummary.summary"; 
           "card-title" = "object.title"; 
           "cardImageLink" = "https://designrevision.com/docs/shards/images/3.jpg"; 

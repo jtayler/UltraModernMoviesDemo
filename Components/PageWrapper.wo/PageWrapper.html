@@ -1,20 +1,24 @@
 <!doctype html>
 <html lang="en">
    <webobject name = "HeadTag">
-      <webobject name = "ERMD2WStyleSheetInjector"/>
-      
-      <!-- wNumb number formatter -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.min.js"></script>
-      
-      <!-- jQuery 1.12.1 UI -->
-      <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+   
       <!-- jQuery 3.3.1 js -->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      
+      <!-- jQuery 1.12.1 UI DO WE NEED THIS AT ALL??? -->
+      <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+      <!-- wNumb number formatter -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.min.js"></script>
+      <!-- Popper js  -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <!-- Bootstrap js  -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <!-- Shards js -->
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/shards-ui@2.1.0/dist/js/shards.min.js"></script>
-      <!-- Cloudfire AJAX and Bootstrap js  -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+      <webobject name = "ERMD2WStyleSheetInjector"/>
+      
       <!-- Bootstrap, Shards, Font Awesome and Share Kit via CDN links -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shards-ui@2.1.0/dist/css/shards.min.css">
@@ -23,8 +27,10 @@
       <!-- Modern Look Overrides for Shards and Bootstrap -->
 	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <webobject name = "BootstrapCSS"></webobject>
+      
    </webobject>
    <webobject name = "BodyTag">
+ 
       <div>
          <div>
             <webobject name = "EntitiesMenu" />
@@ -42,5 +48,32 @@
             <webobject name = "ERD2WDebugFlags" />
          </div>
       </webobject>
+      
+      
+      <!-- 
+      This is an essential fix for bootstrap conflicing with Ajax.framework's prototype.js hide() function
+      Unfortuntabely, it seems this is required or the nav bar menus disappaer if you open and then click away
+      This code very likely requires some additonal checks to ensure it is in fact a bootstrap and to pass
+      on to the original function somehow
+       -->
+<script>
+if(Prototype.BrowserFeatures.ElementExtensions) {
+    var disablePrototypeJS = function(method, pluginsToDisable) {
+            var handler = function(event) {
+                event.target[method] = undefined;
+                setTimeout(function() {
+                    delete event.target[method];
+                }, 0);
+            };
+            pluginsToDisable.each(function(plugin) {
+                jQuery(window).on(method + '.bs.' + plugin, handler);
+            });
+        },
+        pluginsToDisable = ['dropdown'];
+    disablePrototypeJS('hide', pluginsToDisable);
+}
+</script>      
+      
+      
    </webobject>
 </html>

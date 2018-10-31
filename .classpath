@@ -22,7 +22,6 @@
 	<classpathentry exported="true" kind="con" path="WOFramework/JavaEOControl"/>
 	<classpathentry exported="true" kind="con" path="WOFramework/JavaJDBCAdaptor"/>
 	<classpathentry exported="true" kind="con" path="WOFramework/JavaEOProject"/>
-	<classpathentry exported="true" kind="con" path="WOFramework/Ajax"/>
 	<classpathentry exported="true" kind="con" path="WOFramework/H2PlugIn"/>
 	<classpathentry exported="true" kind="con" path="WOFramework/WOLips"/>
 	<classpathentry exported="true" kind="con" path="WOFramework/ERTaggable"/>
@@ -30,6 +29,7 @@
 	<classpathentry exported="true" kind="con" path="WOFramework/ERJavaMail"/>
 	<classpathentry exported="true" kind="con" path="WOFramework/BootstrapModernLook"/>
 	<classpathentry exported="true" kind="con" path="WOFramework/WOOgnl"/>
-	<classpathentry kind="con" path="WOFramework/ERRest"/>
+	<classpathentry exported="true" kind="con" path="WOFramework/ERRest"/>
+	<classpathentry kind="con" path="WOFramework/Ajax"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

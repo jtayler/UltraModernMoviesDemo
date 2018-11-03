@@ -1908,7 +1908,7 @@
         "class" = "com.webobjects.directtoweb.Assignment"; 
         "keyPath" = "cardSectionsContents"; 
         "value" = {
-          "card-footer" = "object.studio.name"; 
+          "card-link-title" = "Tell me more &rarr;"; 
           "card-text" = "object.plotSummary.summary"; 
           "card-title" = "object.title"; 
           "cardImageLink" = "https://designrevision.com/docs/shards/images/3.jpg"; 

@@ -25,11 +25,57 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share-kit/1.0.15/css/social-share-kit.css">
       <!-- Modern Look Overrides for Shards and Bootstrap -->
+
+
+
+
+  <script>
+ 	function getComboA(selectObject) {
+      var value = selectObject.value;  
+      var head = jQuery('head');
+      var text = '<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/' + value + '/bootstrap.css" rel="stylesheet" crossorigin="anonymous">';
+  	  head.append(text);
+	}
+ 
+ </script>
+
+
 	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <webobject name = "BootstrapCSS"></webobject>
+
       
    </webobject>
    <webobject name = "BodyTag">
+ 
+<!-- 
+
+Try any of these themes from a CDN, change the name in the import link below
+
+cosmo      
+cyborg
+darkly
+flatly
+journal
+litera
+lumen
+lux
+materia
+minty
+pulse
+sandstone
+simplex
+sketchy
+slate
+solar
+spacelab
+superhero
+united
+yeti
+
+
+ -->      
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/materia/bootstrap.css" rel="stylesheet">
  
       <div>
          <div>
@@ -56,6 +102,9 @@
       This code very likely requires some additonal checks to ensure it is in fact a bootstrap and to pass
       on to the original function somehow
        -->
+
+
+
 <script>
 if(Prototype.BrowserFeatures.ElementExtensions) {
     var disablePrototypeJS = function(method, pluginsToDisable) {

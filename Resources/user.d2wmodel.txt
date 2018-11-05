@@ -25,6 +25,7 @@
     60 : (task = 'edit' and smartAttribute.className = 'java.lang.String' and smartAttribute.width >= 110) => componentName = ERD2WEditString [com.webobjects.directtoweb.Assignment],
     70 : propertyKey = 'studio' => restrictedChoiceKey = objectsFromContext [com.webobjects.directtoweb.Assignment],
     100 : *true* => look = ERModernLook [com.webobjects.directtoweb.Assignment],
+    100 : *true* => defaultPage = BMLListAllPage [com.webobjects.directtoweb.Assignment],
     100 : *true* => datePickerRangeHigh = 20091205 [com.webobjects.directtoweb.Assignment],
     100 : *true* => datePickerRangeHigh = 20091215 [com.webobjects.directtoweb.Assignment],
     100 : *true* => isEntityEditable = true [com.webobjects.directtoweb.BooleanAssignment],

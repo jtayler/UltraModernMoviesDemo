@@ -147,7 +147,9 @@ public class MoviesNavigationController implements NextPageDelegate {
 	public void checkNextPage() {
 		WOComponent page = context().page();
 		
-		nextPage = context().page();
+		if (nextPage == null) {
+			nextPage = context().page();
+		}
 		 if (page instanceof EditPageInterface || page instanceof QueryPageInterface) {
 			 // we don't put query pages on the stack
 			 // they are boring to cancel back to.

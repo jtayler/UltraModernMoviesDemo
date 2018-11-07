@@ -43,7 +43,7 @@ public class DirectAction extends ERD2WDirectAction {
 		
 		// ENHANCEME - add appropriate login behaviour here
 		
-		return D2W.factory().defaultPage(session());
+        return D2W.factory().pageForConfigurationNamed("QueryMovie", session());
 	}
 	
 }

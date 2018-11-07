@@ -5,9 +5,6 @@
       <!-- jQuery 3.3.1 js -->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       
-      <!-- jQuery 1.12.1 UI DO WE NEED THIS AT ALL??? -->
-      <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-
       <!-- wNumb number formatter -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.min.js"></script>
       <!-- Popper js  -->
@@ -18,28 +15,19 @@
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/shards-ui@2.1.0/dist/js/shards.min.js"></script>
 
       
-      <!-- Bootstrap, Shards, Font Awesome and Share Kit via CDN -->
+      <!-- Bootstrap & Share Kit css -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shards-ui@2.1.0/dist/css/shards.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share-kit/1.0.15/css/social-share-kit.css">
 
-      <!-- Roboto -->
+       <!-- Shards css -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shards-ui@2.1.0/dist/css/shards.min.css">
+
+
+      <!-- Font Awesome css -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!-- Roboto font -->
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-
-      <!-- MDB's js stuff -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.13/js/mdb.min.js"></script>
-
-
-  <script>
- 	function getComboA(selectObject) {
-      var value = selectObject.value;  
-      var head = jQuery('head');
-      var text = '<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/' + value + '/bootstrap.css" rel="stylesheet" crossorigin="anonymous">';
-  	  head.append(text);
-	}
- 
- </script>
 
 
 	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,6 +38,7 @@
    <webobject name = "BodyTag">
  
 <!-- 
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
 
 Try any of these themes from a CDN, change the name in the import link below
 
@@ -79,15 +68,19 @@ yeti
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.13/css/mdb.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
- -->      
 
 <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+ -->      
+
+<!-- MDB core JavaScript -->
+
 
  
       <div>
          <div>
             <webobject name = "EntitiesMenu" />
-            <small style="position:absolute;right:0;" class="text-muted m-2">
+            <small style="position:absolute;right:0; z-index:1000;" class="text-muted m-2">
                <wo:str value="$d2wContext.displayNameForEntity"/>
             </small>
          </div>
@@ -129,7 +122,47 @@ if(Prototype.BrowserFeatures.ElementExtensions) {
     disablePrototypeJS('hide', pluginsToDisable);
 }
 </script>      
-      
-      
+            
+<script>
+var items = document.querySelectorAll('.card.bouncing');
+var isToggled = false;
+var isMoving = true
+var toggleDirection = 1;
+var lastMove =  new Date();
+var moveIndex = -1;
+var delay = 50;
+
+
+
+animate();
+
+function animate() {
+  moveItems();
+  requestAnimationFrame( animate );
+}
+
+function moveItems() {
+  if ( !isMoving ) {
+    return;
+  }
+  var now = new Date();
+  if ( now - lastMove < delay ) {
+    return
+  }
+  lastMove = now;
+  moveIndex += toggleDirection;
+  var item = items[ moveIndex ];
+  if ( item ) {
+    item.classList.toggle('bounce');
+  } else {
+    isMoving = false;
+  }
+}
+
+
+</script>
+            
+            
+            
    </webobject>
 </html>

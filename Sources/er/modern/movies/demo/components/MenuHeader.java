@@ -1,5 +1,6 @@
 package er.modern.movies.demo.components;
 
+import com.webobjects.appserver.WOActionResults;
 import com.webobjects.appserver.WOComponent;
 import com.webobjects.appserver.WOContext;
 import com.webobjects.appserver.WORedirect;
@@ -60,6 +61,6 @@ public class MenuHeader extends ERXComponent {
     }
     
     public WOComponent homeAction() {
-        return D2W.factory().defaultPage(session());
+        return D2W.factory().pageForConfigurationNamed("QueryMovie", session());
     }
 }

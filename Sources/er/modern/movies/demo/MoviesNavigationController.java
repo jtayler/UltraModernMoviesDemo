@@ -37,7 +37,7 @@ public class MoviesNavigationController implements NextPageDelegate {
 	// NAV ACTIONS
 	
 	public WOComponent homeAction() {
-        return D2W.factory().defaultPage(session());
+        return D2W.factory().pageForConfigurationNamed("QueryMovie", session());
     }
 	
 	// ADMIN
